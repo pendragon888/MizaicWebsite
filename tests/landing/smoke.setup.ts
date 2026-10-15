@@ -2,7 +2,7 @@ import { test as setup, expect } from '@fixtures/pages.fixture'
 import path from 'path'
 
 setup.describe('Smoke test web application', async () => {
-    setup('Verify each page can be accessed', async ({ landingPage, contactUsPage, mediViewerPage, leoPage, edmsDeploymentPage, page }) => {
+    setup('Verify each page can be accessed', async ({ landingPage, contactUsPage, mediViewerPage, leoPage, edmsDeploymentPage, aboutPage, teamPage, partnersPage, careersPage, bookADemoPage, page }) => {
         await page.context().addCookies([{
             name: 'CookieConsent',
             value: '{stamp:%27kujc3vBNDBJDwkSHvKUqitwiu06hk6bIwzVP4d8DQcG7XhbDMgii6A==%27%2Cnecessary:true%2Cpreferences:true%2Cstatistics:true%2Cmarketing:true%2Cmethod:%27explicit%27%2Cver:3%2Cutc:1792060561852%2Cregion:%27gb%27}',
@@ -27,6 +27,21 @@ setup.describe('Smoke test web application', async () => {
         await edmsDeploymentPage.goto()
         await expect(page).toHaveTitle('The blueprint to EDMS implementation success | Mizaic')
         await expect(edmsDeploymentPage.headerMain).toBeVisible()
+        await aboutPage.goto()
+        await expect(page).toHaveTitle('About Mizaic | The healthcare transformation specialist')
+        await expect(aboutPage.heading).toBeVisible()
+        await teamPage.goto()
+        await expect(page).toHaveTitle('Meet the team | Mizaic')
+        await expect(teamPage.headerMain).toBeVisible()
+        await partnersPage.goto()
+        await expect(page).toHaveTitle('Mizaic’s collaborations | Partner with us')
+        await expect(partnersPage.headerMain).toBeVisible()
+        await careersPage.goto()
+        await expect(page).toHaveTitle('Careers  | Join the Mizaic team')
+        await expect(careersPage.headerMain).toBeVisible()
+        await bookADemoPage.goto()
+        await expect(page).toHaveTitle('Book a demo | MediViewer™ powered by Mizaic')
+        await expect(bookADemoPage.headerMain).toBeVisible()
         await contactUsPage.goto()
         await expect(page).toHaveTitle('Contact Mizaic - the NHS Transformation specialists')
         await expect(contactUsPage.headerMain).toBeVisible()
