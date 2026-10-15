@@ -1,4 +1,4 @@
-# Playwright Testing for Mizaic' Website
+# Playwright Testing for Mizaic's Website
 
 This Playwright automation test framework uses TypeScript to automate [Mizaic](https://www.mizaic.com/)
 
