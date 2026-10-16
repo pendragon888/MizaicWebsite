@@ -43,7 +43,7 @@ setup.describe('Smoke test web application', async () => {
         await expect(page).toHaveTitle('Book a demo | MediViewer™ powered by Mizaic')
         await expect(bookADemoPage.headerMain).toBeVisible()
         await insightsHubPage.goto()
-        await expect(page).toHaveTitle('Book a demo | MediViewer™ powered by Mizaic')
+        await expect(page).toHaveTitle('Insights Hub | Mizaic')
         await expect(insightsHubPage.h1).toBeVisible()
         await contactUsPage.goto()
         await expect(page).toHaveTitle('Contact Mizaic - the NHS Transformation specialists')
