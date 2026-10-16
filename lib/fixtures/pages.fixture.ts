@@ -7,6 +7,7 @@ import { TeamPage } from "@pages/about/team/team.page"
 import { PartnersPage } from "@pages/about/partners/partners.page"
 import { CareersPage } from "@pages/about/careers/careers.page"
 import { BookADemoPage } from "@pages/about/bookADemo/bookADemo.page"
+import { InsightsHubPage } from "@pages/insightsHub/insightsHub.page"
 import { ContactUsPage } from "@pages/contactUs/contactUs.page"
 import { test as baseTest } from "@playwright/test"
 
@@ -20,8 +21,9 @@ type MyPages = {
     partnersPage: PartnersPage
     careersPage: CareersPage
     bookADemoPage: BookADemoPage
+    insightsHubPage: InsightsHubPage
     contactUsPage: ContactUsPage
-};
+}
 
 export const test = baseTest.extend<MyPages>({
     landingPage: async ({ page }, use) => {
@@ -51,9 +53,12 @@ export const test = baseTest.extend<MyPages>({
     bookADemoPage: async ({ page }, use) => {
     await use(new BookADemoPage(page))
     },
+    insightsHubPage: async ({ page }, use) => {
+    await use(new InsightsHubPage(page))
+    },
     contactUsPage: async ({ page }, use) => {
     await use(new ContactUsPage(page))
     },
-});
+})
 
 export { expect } from "@playwright/test"
