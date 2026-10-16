@@ -9,6 +9,7 @@ import { CareersPage } from "@pages/about/careers/careers.page"
 import { BookADemoPage } from "@pages/about/bookADemo/bookADemo.page"
 import { InsightsHubPage } from "@pages/insightsHub/insightsHub.page"
 import { ContactUsPage } from "@pages/contactUs/contactUs.page"
+import { Error404Page } from "@pages/landing/error404.page"
 import { test as baseTest } from "@playwright/test"
 
 type MyPages = {
@@ -23,6 +24,7 @@ type MyPages = {
     bookADemoPage: BookADemoPage
     insightsHubPage: InsightsHubPage
     contactUsPage: ContactUsPage
+    error404Page: Error404Page
 }
 
 export const test = baseTest.extend<MyPages>({
@@ -58,6 +60,9 @@ export const test = baseTest.extend<MyPages>({
     },
     contactUsPage: async ({ page }, use) => {
     await use(new ContactUsPage(page))
+    },
+    error404Page: async ({ page }, use) => {
+    await use(new Error404Page(page))
     },
 })
 
