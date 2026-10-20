@@ -6,6 +6,7 @@ This Playwright automation test framework uses TypeScript to automate [Mizaic](h
 - Develop Playwright automation framework using TypeScript.
 - Demonstrate use of POM (Page Object Model) to show readable, maintainable and scalable code.
 - Create UI tests to verify core webpages are present and functional.
+- Perform tests against a variety of web browsers and mobile viewports.
 - Integrate CI/CD workflow using GitHub Actions.
 - Development timeboxed to one working week.
 

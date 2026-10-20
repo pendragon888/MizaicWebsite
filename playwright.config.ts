@@ -65,16 +65,16 @@ export default defineConfig({
     },
 
     /* Test against mobile viewports. */
-    //{
-    //  name: 'Mobile Chrome',
-    //  dependencies: ["setup"],
-    //  use: { ...devices['Pixel 5'] },
-    //},
-    // {
-    //   name: 'Mobile Safari',
-    //   dependencies: ["setup"],
-    //   use: { ...devices['iPhone 12'] },
-    // },
+    {
+     name: 'Mobile Chrome',
+     dependencies: ["setup"],
+     use: { ...devices['Pixel 5'] },
+    },
+    {
+      name: 'Mobile Safari',
+      dependencies: ["setup"],
+      use: { ...devices['iPhone 12'] },
+    },
 
     /* Test against branded browsers. */
     // {
