@@ -1,3 +1,4 @@
+import { NavigationPage } from "@pages/navigation/navigation.page"
 import { LandingPage } from "@pages/landing/landing.page"
 import { MediViewerPage } from "@pages/mediViewer/mediViewer.page"
 import { LeoPage } from "@pages/leo/leo.page"
@@ -13,6 +14,7 @@ import { Error404Page } from "@pages/landing/error404.page"
 import { test as baseTest } from "@playwright/test"
 
 type MyPages = {
+    navigationPage: NavigationPage
     landingPage: LandingPage
     mediViewerPage: MediViewerPage
     leoPage: LeoPage
@@ -28,6 +30,9 @@ type MyPages = {
 }
 
 export const test = baseTest.extend<MyPages>({
+    navigationPage: async ({ page }, use) => {
+    await use(new NavigationPage(page))
+    },
     landingPage: async ({ page }, use) => {
     await use(new LandingPage(page))
     },
