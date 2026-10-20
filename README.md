@@ -53,6 +53,21 @@ Steps on how to install dependencies and execute the tests.
     ```
 
 
+## Areas of Interest / Suggested Improvements
+
+### data-testid
+
+- Adding the 'data-testid' HTML attribute to uniquely identified elements in the UI would contribute towards the reliability, maintainance, stability and scalability of the automated tests.
+
+![MissingTestID](/README_images/Missing_TestId.jpg)
+
+
+### Missing alt-text from images
+- Many alt-text descriptions to images are missing such as on the Mizaic Insight Hub webpage. Adding this would help towards accessibility compliance.
+
+![MissingAltText](README_images/Missing_alt_text.jpg)
+
+
 ## Testing Framework Developed By
 
 **Kevin D**
