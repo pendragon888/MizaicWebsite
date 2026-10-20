@@ -1,5 +1,5 @@
 import { test, expect } from '@fixtures/pages.fixture'
-import { formData } from '@datafactory/contactUsData.json'
+import { formData } from '@datafactory/contactFormData.json'
 
 test.describe("Visit Contact Us page for Mizaic", ()=>{
     test.use({ storageState: 'playwright/.auth/cookies.json'})
