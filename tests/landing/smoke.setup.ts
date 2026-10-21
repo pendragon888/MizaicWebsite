@@ -23,7 +23,7 @@ setup.describe('Smoke test web application', async () => {
         await expect(mediViewerPage.main).toBeVisible()
         await leoPage.goto()
         await expect(page).toHaveTitle('LEO | Smarter referral management for NHS teams')
-        await expect(leoPage.headerMain).toBeVisible()
+        await expect(leoPage.main).toBeVisible()
         await edmsDeploymentPage.goto()
         await expect(page).toHaveTitle('The blueprint to EDMS implementation success | Mizaic')
         await expect(edmsDeploymentPage.headerMain).toBeVisible()
