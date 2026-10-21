@@ -32,7 +32,7 @@ setup.describe('Smoke test web application', async () => {
         await expect(aboutPage.headingMain).toBeVisible()
         await teamPage.goto()
         await expect(page).toHaveTitle('Meet the team | Mizaic')
-        await expect(teamPage.headerMain).toBeVisible()
+        await expect(teamPage.main).toBeVisible()
         await partnersPage.goto()
         await expect(page).toHaveTitle('Mizaic’s collaborations | Partner with us')
         await expect(partnersPage.headerMain).toBeVisible()
