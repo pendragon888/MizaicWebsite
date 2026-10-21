@@ -29,7 +29,7 @@ setup.describe('Smoke test web application', async () => {
         await expect(edmsDeploymentPage.main).toBeVisible()
         await aboutPage.goto()
         await expect(page).toHaveTitle('About Mizaic | The healthcare transformation specialist')
-        await expect(aboutPage.heading).toBeVisible()
+        await expect(aboutPage.headingMain).toBeVisible()
         await teamPage.goto()
         await expect(page).toHaveTitle('Meet the team | Mizaic')
         await expect(teamPage.headerMain).toBeVisible()

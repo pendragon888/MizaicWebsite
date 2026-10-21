@@ -2,11 +2,17 @@ import { type Locator, type Page} from "playwright"
 
 export class AboutPage {
     readonly page: Page
-    readonly heading: Locator
+    readonly headingMain: Locator
+    readonly headingImplementation: Locator
+    readonly headingCorePrinciples: Locator
+    readonly main: Locator
 
     constructor(page:Page) {
         this.page = page
-        this.heading = page.getByRole('heading', { name: 'Meet Mizaic — healthcare' })
+        this.headingMain = page.getByRole('heading', { name: 'Meet Mizaic — healthcare' })
+        this.main = page.getByRole('main')
+        this.headingImplementation = page.getByRole('heading', { name: 'Implementation focused on' })
+        this.headingCorePrinciples = page.getByRole('heading', { name: 'Our core principles and how' })
     }
 
     async goto(){
