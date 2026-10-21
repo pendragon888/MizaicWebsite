@@ -6,7 +6,7 @@ test.describe("Visit Insights Hub page for Mizaic", ()=>{
         await insightsHubPage.goto()
     })
 
-    test('Validate Insights Hub page present', async ({ insightsHubPage, page }) => {
+    test('Validate Insights Hub page present', async ({ insightsHubPage }) => {
         await expect (insightsHubPage.h1).toContainText('Insights Hub')
     })
 
